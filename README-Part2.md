@@ -453,6 +453,8 @@ Osa 2 (Azure):      _storageService.UploadAsync(...)  →  AzureBlobStorageServi
 
 Julkaise sovellus Vaiheessa 1 luotuun App Serviceen. Valitse sinulle sopivin tapa:
 
+Tässä vaiheessa sovelluksen kannattaa käynnistyä edelleen `LocalStorageService`-toteutuksella. Aseta Azure Blob Storage käyttöön vasta, kun Managed Identity ja RBAC-oikeudet ovat kunnossa. Muuten App Service voi jäädä käynnistyksessä tilaan `RuntimeStarting` ja palauttaa lopulta `BadGatewayConnection`.
+
 Muista Program.cs käydä laittamassa swagger toimimaan myös azuressa. Eli katso, että swagger komennot eivät ole
 
 if (app.Environment.IsDevelopment()) <-- Tuon sisällä
@@ -477,6 +479,20 @@ app.UseSwaggerUI();
 3. Visual Studio avaa automaattisesti selaimen sovelluksen URL:iin
 
 **3.4** Lisää `/swagger` URL:n loppuun selaimessa.
+
+Jos et paase sivulle odotetulla osoitteella, tarkista App Servicen oikea host-nimi:
+
+```bash
+az webapp show \
+  --name $APP_NAME \
+  --resource-group $RESOURCE_GROUP \
+  --query defaultHostName \
+  --output tsv
+```
+
+Kayta Swaggeriin muotoa `https://<defaultHostName>/swagger`.
+
+Jos Swagger aukeaa, julkaisu onnistui. Kuvien upload voi tässä vaiheessa edelleen käyttää lokaalia provideria App Servicen sisällä, ja se on tarkoituksellista.
 
 > **Vinkki uudelleenjulkaisuun:** Kun teet muutoksia koodiin, klikkaa Publish-välilehdellä uudelleen **"Publish"** — Visual Studio muistaa profiilin eikä kysy kohdetta uudestaan.
 
@@ -519,7 +535,7 @@ az webapp browse --name $APP_NAME --resource-group $RESOURCE_GROUP
 
 </details>
 
-Swagger-sivun pitäisi näkyä, mutta kuvien lataus epäonnistuu — Storage-asetukset puuttuvat vielä. Korjataan ne seuraavaksi.
+Swagger-sivun pitää nyt näkyä ilman Blob Storage -yhteyttä. Azure Storage otetaan käyttöön vasta vaiheiden 4-6 jälkeen.
 
 ---
 
@@ -536,7 +552,7 @@ Kehityskone:                        Azure App Service:
 ────────────────────────────        ────────────────────────────────────
 appsettings.json          →         appsettings.json (ei voi muokata!)
 User Secrets              →         Application Settings  ← tämä on vastine
-  ModerationService:ApiKey            Storage__Provider = "azure"
+  ModerationService:ApiKey            Storage__Provider = "local"
   → Vain sinun koneellasi             → Tallennetaan App Serviceen
 
 Molemmat ylikirjoittavat appsettings.json:n arvot automaattisesti.
@@ -551,15 +567,17 @@ Molemmat ylikirjoittavat appsettings.json:n arvot automaattisesti.
 > | `Storage:AccountName = "stgallery..."` | Application Settings ✓ — julkinen tieto |
 > | `ModerationService:ApiKey = "sk-..."` | **Key Vault** ✓ (Osa 3) — oikea salaisuus |
 
-### 4.2 Aseta asetukset
+### 4.2 Aseta asetukset turvallisessa järjestyksessä
 
-Sovellus tarvitsee kolme arvoa tietääkseen, mihin Blob Storageen kuvat tallennetaan:
+Voit lisätä Blob Storageen liittyvät arvot jo tässä vaiheessa, mutta pidä provider vielä tilassa `local`, kunnes Managed Identity ja RBAC on tehty. Tällä varmistat, että App Service käynnistyy varmasti eikä yritä kirjautua Blob Storageen kesken konfiguroinnin.
 
 | Name | Value | Mitä ohjaa |
 |---|---|---|
-| `Storage__Provider` | `azure` | Valitsee `AzureBlobStorageService`-toteutuksen |
-| `Storage__AccountName` | `stgallery<etunimi>` | Storage Accountin nimi (URL:n osa) |
+| `Storage__Provider` | `local` | Pitää käynnistyksessä käytössä `LocalStorageService`-toteutuksen vielä tämän vaiheen ajan |
+| `Storage__AccountName` | `stgallery<etunimi>` | Storage Accountin nimi valmiiksi seuraavia vaiheita varten |
 | `Storage__ContainerName` | `photos` | Containerin nimi Accountin sisällä |
+
+> **Tärkeä huomio:** jos vaihdat `Storage__Provider`-arvon `azure`-tilaan ennen Vaiheita 5-6, App Service voi jumittua käynnistyksessä. `DefaultAzureCredential` yrittää silloin hakea tunnusta Blob Storageen ennen kuin identiteetillä on oikeudet.
 
 > **Miksi kaksi alaviivaa (`__`)?** Application Settingsin avainnimet eivät voi sisältää kaksoispistettä (`:`). ASP.NET Core tunnistaa kaksi alaviivaa hierarkkiseksi erottimeksi:
 > ```
@@ -589,7 +607,7 @@ az webapp config appsettings set \
   --name $APP_NAME \
   --resource-group $RESOURCE_GROUP \
   --settings \
-    "Storage__Provider=azure" \
+    "Storage__Provider=local" \
     "Storage__AccountName=$STORAGE_ACCOUNT" \
     "Storage__ContainerName=photos"
 ```
@@ -609,21 +627,19 @@ az webapp restart --name $APP_NAME --resource-group $RESOURCE_GROUP
 
 </details>
 
-### 4.3 Testaa — ja odota virhettä
+### 4.3 Testaa että sovellus käynnistyy edelleen
 
-Kokeile Swaggerissa kuvan latausta (`POST /api/albums/{id}/photos`). Todennäköisesti näet virheen:
+Varmista ensin, että Swagger aukeaa edelleen App Servicessa. Jos se aukeaa, julkaisu ja Application Settings -konfiguraatio ovat kunnossa.
 
-```
-AuthenticationFailedException: DefaultAzureCredential failed to retrieve a token...
-```
+Jos kokeilet uploadia tässä vaiheessa, pyyntö käyttää edelleen lokaalia provideria. Se on tähän vaiheeseen asti tarkoituksellista, koska Blob Storage -yhteyden aktivointi tehdään vasta sen jälkeen, kun App Servicella on identiteetti ja oikeudet.
 
-**Tämä on odotettua.** Sovellus löytää nyt Storage Accountin osoitteen konfiguraatiosta, mutta `DefaultAzureCredential` ei löydä toimivaa tunnistautumistapaa — App Servicella ei ole vielä identiteettiä. Korjataan se seuraavaksi. Jos saat uploadattua kuvan, niin silloin azuressa env variablet ei ole oikein asetettu!
+Seuraavaksi annetaan App Servicelle identiteetti ja oikeudet Blob Storageen.
 
 ---
 
 ## Vaihe 5: Aktivoi Managed Identity
 
-Vaiheessa 4 näit `AuthenticationFailedException`-virheen. Sovellus tietää *minne* yhdistää (Storage Account), mutta ei pysty todistamaan *kuka se on*. Tässä vaiheessa annetaan sovellukselle identiteetti.
+Vaiheessa 4 annoit sovellukselle Blob Storage -asetukset, mutta et vielä ottanut Azure-provideria käyttöön. Sovellus tietää nyt *minne* yhdistää (Storage Account), mutta se ei vielä pysty todistamaan *kuka se on*. Tässä vaiheessa annetaan sovellukselle identiteetti.
 
 ### Mikä on Managed Identity ja miksi se ratkaisee ongelman?
 
@@ -767,6 +783,33 @@ Jos lataus ei toimi odotuksen jälkeen:
 - tarkista että App Servicen Identity on On (Vaihe 5)
 - käynnistä App Service uudelleen ja testaa uudelleen
 
+**6.3** Vaihda storage-provider vihdoin Azureen:
+
+<details>
+<summary><strong>▶ Azure Portal</strong></summary>
+
+1. Avaa App Service (`gallery-api-<etunimi>`)
+2. Avaa **"Environment variables"**
+3. Muuta arvo `Storage__Provider` -> `azure`
+4. Klikkaa **"Apply"** -> **"Confirm"**
+5. Käynnistä App Service tarvittaessa uudelleen
+
+</details>
+
+<details>
+<summary><strong>▶ Azure CLI</strong></summary>
+
+```bash
+az webapp config appsettings set \
+  --name $APP_NAME \
+  --resource-group $RESOURCE_GROUP \
+  --settings "Storage__Provider=azure"
+
+az webapp restart --name $APP_NAME --resource-group $RESOURCE_GROUP
+```
+
+</details>
+
 ---
 
 ## Vaihe 7: Testaa kuvan lataus Azureen
@@ -796,6 +839,12 @@ az webapp restart --name $APP_NAME --resource-group $RESOURCE_GROUP
 3. Vastauksen `imageUrl` on nyt Azure Blob Storage -URL:
    `https://stgallery....blob.core.windows.net/photos/albumId/photo.jpg`
 4. Avaa URL selaimessa — kuvan pitäisi näkyä
+
+> Jos `https://<APP_NAME>.azurewebsites.net` ei toimi, hae oikea host:
+> ```bash
+> az webapp show --name $APP_NAME --resource-group $RESOURCE_GROUP --query defaultHostName --output tsv
+> ```
+> ja avaa `https://<defaultHostName>/swagger`.
 
 **7.3** Tarkista, että kuva tallentui Azure Blob Storageen:
 
@@ -844,10 +893,12 @@ Kehityskone:
   Tulos: käyttää LocalStorageService
 
 Azure App Service:
-  appsettings.json        → Storage:Provider = "local"   (oletusarvo)
-  Application Settings    → Storage:Provider = "azure"   (ylikirjoittaa!)
+  appsettings.json        → Storage:Provider = "local"   (turvallinen oletus)
+  Application Settings    → Storage:Provider = "local"   (vaihe 4, väliaikainen)
+  Managed Identity + RBAC → oikeus Blob Storageen
+  Application Settings    → Storage:Provider = "azure"   (vaihe 6.3, lopullinen)
                           → Storage:AccountName = "stgallery..."
-  Tulos: käyttää AzureBlobStorageService
+  Tulos: käyttää AzureBlobStorageService vasta kun oikeudet ovat kunnossa
 ```
 
 Huomaa: `ModerationService:ApiKey` puuttuu vielä App Servicesta — se lisätään Key Vaultista Osassa 3.

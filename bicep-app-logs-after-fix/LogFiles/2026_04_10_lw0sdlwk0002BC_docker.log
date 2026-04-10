@@ -1,0 +1,626 @@
+2026-04-10T09:14:46.5629894Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-04-10T09:14:50.5218832Z State: Starting, Action: StartingMsiContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-04-10T09:15:08.1143815Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-04-10T09:15:08.1148760Z Container start method called.
+2026-04-10T09:15:08.1154407Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:15:08.1157100Z Establishing network.
+2026-04-10T09:15:08.1158620Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:15:08.3626043Z Image appsvc/dotnetcore:8.0_20260115.4.tuxprod is pulled from registry 10.1.0.4:13209
+2026-04-10T09:15:08.3627470Z Container is starting.
+2026-04-10T09:15:08.3709956Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:15:08.3726884Z Establishing user namespace if not established already.
+2026-04-10T09:15:08.3734111Z Establishing network if not established already.
+2026-04-10T09:15:08.3749909Z Mounting volumes.
+2026-04-10T09:15:08.3811705Z Nested mountpoint 
+2026-04-10T09:15:08.4214471Z Nested mountpoint volatile/logs
+2026-04-10T09:15:08.4694041Z Nested mountpoint 
+2026-04-10T09:15:08.5308158Z Nested mountpoint 
+2026-04-10T09:15:08.5510156Z Nested mountpoint 
+2026-04-10T09:15:08.9190073Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:15:08.9191505Z Creating container.
+2026-04-10T09:15:08.9200170Z Creating pipes for streaming container io.
+2026-04-10T09:15:08.9207066Z Creating stdout named pipe at /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stdout_b278e5a8861c47d59284d6bd627335db.
+2026-04-10T09:15:08.9377928Z Successfully created stdout named pipe at: /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stdout_b278e5a8861c47d59284d6bd627335db.
+2026-04-10T09:15:08.9379426Z Opening named pipe /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stdout_b278e5a8861c47d59284d6bd627335db for reading in non-blocking mode.
+2026-04-10T09:15:08.9388054Z Successfully opened named pipe: /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stdout_b278e5a8861c47d59284d6bd627335db.
+2026-04-10T09:15:08.9389512Z Successfully removed non-blocking flag from /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stdout_b278e5a8861c47d59284d6bd627335db.
+2026-04-10T09:15:08.9573196Z Creating stderr named pipe at /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stderr_76ea655f69704f48922eaf20b93461e3.
+2026-04-10T09:15:08.9575307Z Successfully created stderr named pipe at: /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stderr_76ea655f69704f48922eaf20b93461e3.
+2026-04-10T09:15:08.9576058Z Opening named pipe /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stderr_76ea655f69704f48922eaf20b93461e3 for reading in non-blocking mode.
+2026-04-10T09:15:08.9577012Z Successfully opened named pipe: /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stderr_76ea655f69704f48922eaf20b93461e3.
+2026-04-10T09:15:08.9577789Z Successfully removed non-blocking flag from /podr/container/pipe/40e83a794abd_gallery-api-sohvi-bicep/stderr_76ea655f69704f48922eaf20b93461e3.
+2026-04-10T09:15:08.9596153Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:15:09.9648605Z Starting container: 40e83a794abd_gallery-api-sohvi-bicep.
+2026-04-10T09:15:10.1949321Z Starting watchers and probes.
+2026-04-10T09:15:10.1953464Z Starting metrics collection.
+2026-04-10T09:15:10.1954698Z Container is running.
+2026-04-10T09:15:10.1955686Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:15:10.5182748Z Container start method finished after 2403 ms.
+2026-04-10T09:15:10.5184668Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:15:10.5184863Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:15:56.7039603Z Container has finished running with exit code: 134.
+2026-04-10T09:15:56.7426985Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:15:56.7847316Z Stop and delete container. Retry count = 0
+2026-04-10T09:15:56.7936800Z Stopping container: 40e83a794abd_gallery-api-sohvi-bicep.
+2026-04-10T09:15:56.9446384Z Deleting container: 40e83a794abd_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:15:57.2257545Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:15:57.2422548Z Container is terminated. Total time elapsed: 491 ms.
+2026-04-10T09:15:57.2429297Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:15:57.2664710Z State: Stopping, Action: CancellingStartup, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:57.3181854Z Site startup probe failed after 46.7306032 seconds.
+2026-04-10T09:15:57.5113012Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:57.5320995Z Failed to start site. Revert by stopping site.
+2026-04-10T09:15:57.5808358Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:57.6013946Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:57.6026661Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:15:57.6589413Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:59.1259001Z Site container: gallery-api-sohvi-bicep_managedIdentity terminated during site startup.
+2026-04-10T09:15:59.1269271Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:59.3416002Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:15:59.9104141Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:15:59 (UTC), DetailsLevel: ERR
+2026-04-10T09:16:00.1371814Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:15:59 (UTC), DetailsLevel: ERR
+2026-04-10T09:16:05.9070811Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:15:59 (UTC), DetailsLevel: ERR
+2026-04-10T09:16:10.5089892Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:15:59 (UTC), DetailsLevel: ERR
+2026-04-10T09:16:27.0932036Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:15:59 (UTC), DetailsLevel: ERR
+2026-04-10T09:16:27.1029994Z Container start method called.
+2026-04-10T09:16:27.1210391Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:16:27.1217072Z Establishing network.
+2026-04-10T09:16:27.1225200Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:16:27.2935234Z Container is starting.
+2026-04-10T09:16:27.3006273Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:16:27.3011216Z Establishing user namespace if not established already.
+2026-04-10T09:16:27.3013681Z Establishing network if not established already.
+2026-04-10T09:16:27.3014917Z Mounting volumes.
+2026-04-10T09:16:27.3035762Z Nested mountpoint 
+2026-04-10T09:16:27.3620477Z Nested mountpoint volatile/logs
+2026-04-10T09:16:27.4104719Z Nested mountpoint 
+2026-04-10T09:16:27.4112748Z Nested mountpoint 
+2026-04-10T09:16:27.5412618Z Nested mountpoint 
+2026-04-10T09:16:27.8196438Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:16:27.8266687Z Creating container.
+2026-04-10T09:16:27.8268249Z Creating pipes for streaming container io.
+2026-04-10T09:16:27.8269439Z Creating stdout named pipe at /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stdout_84d6bdd85adb459a9ce96b0f605f39a6.
+2026-04-10T09:16:27.8271786Z Successfully created stdout named pipe at: /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stdout_84d6bdd85adb459a9ce96b0f605f39a6.
+2026-04-10T09:16:27.8272808Z Opening named pipe /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stdout_84d6bdd85adb459a9ce96b0f605f39a6 for reading in non-blocking mode.
+2026-04-10T09:16:27.8274196Z Successfully opened named pipe: /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stdout_84d6bdd85adb459a9ce96b0f605f39a6.
+2026-04-10T09:16:27.8275209Z Successfully removed non-blocking flag from /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stdout_84d6bdd85adb459a9ce96b0f605f39a6.
+2026-04-10T09:16:27.8285738Z Creating stderr named pipe at /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stderr_9729212ad9004479ad2ec56facf250b8.
+2026-04-10T09:16:27.8291358Z Successfully created stderr named pipe at: /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stderr_9729212ad9004479ad2ec56facf250b8.
+2026-04-10T09:16:27.8292596Z Opening named pipe /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stderr_9729212ad9004479ad2ec56facf250b8 for reading in non-blocking mode.
+2026-04-10T09:16:27.8295474Z Successfully opened named pipe: /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stderr_9729212ad9004479ad2ec56facf250b8.
+2026-04-10T09:16:27.8385452Z Successfully removed non-blocking flag from /podr/container/pipe/5546df9b701b_gallery-api-sohvi-bicep/stderr_9729212ad9004479ad2ec56facf250b8.
+2026-04-10T09:16:27.8396805Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:16:28.2144634Z Starting container: 5546df9b701b_gallery-api-sohvi-bicep.
+2026-04-10T09:16:28.2738185Z Starting watchers and probes.
+2026-04-10T09:16:28.2754581Z Starting metrics collection.
+2026-04-10T09:16:28.2834748Z Container is running.
+2026-04-10T09:16:28.2840836Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:16:28.4913584Z Container start method finished after 1378 ms.
+2026-04-10T09:16:28.4917702Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:16:28.4918265Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:17:07.8392522Z Container has finished running with exit code: 134.
+2026-04-10T09:17:07.8453476Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:17:07.8463224Z Stop and delete container. Retry count = 0
+2026-04-10T09:17:07.8464090Z Stopping container: 5546df9b701b_gallery-api-sohvi-bicep.
+2026-04-10T09:17:07.9465334Z Deleting container: 5546df9b701b_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:17:08.1716508Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:17:08.1856754Z Container is terminated. Total time elapsed: 339 ms.
+2026-04-10T09:17:08.1875704Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:17:08.1931986Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:15:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:08.2495362Z Site startup probe failed after 39.7479993 seconds.
+2026-04-10T09:17:08.5038377Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:08.6011243Z Failed to start site. Revert by stopping site.
+2026-04-10T09:17:08.6013756Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:08.6804566Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:08.6805024Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:17:08.7208217Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:10.1550974Z Site container: gallery-api-sohvi-bicep_managedIdentity terminated during site startup.
+2026-04-10T09:17:10.1624646Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:10.2978192Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:17:11.2710047Z Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:18:11
+2026-04-10T09:17:11.2720797Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:11.4151199Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:17:11 (UTC), DetailsLevel: WARN
+2026-04-10T09:17:11.6408112Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:17:11 (UTC), DetailsLevel: WARN
+2026-04-10T09:17:16.9126237Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:16.9128142Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:22.2106954Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:22.2107746Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:27.6298560Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:27.6298893Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:32.9097150Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:32.9097670Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:38.0971967Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:38.0972523Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:43.3281781Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:43.3284064Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:48.4827822Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:48.4828544Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:53.7382047Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:53.7384688Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:17:58.8705097Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:17:58.8705361Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:18:04.1278695Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:18:04.1279274Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:18:09.3113381Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:18:09.3113674Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:18:11.2687766Z Site: gallery-api-sohvi-bicep is unblocked.
+2026-04-10T09:18:14.6205670Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:18:17.6595257Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:18:29.0646324Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:18:11, DetailsLevel: WARN
+2026-04-10T09:18:29.0649587Z Container start method called.
+2026-04-10T09:18:29.0654298Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:18:29.0823902Z Establishing network.
+2026-04-10T09:18:29.1001667Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:18:29.3686917Z Container is starting.
+2026-04-10T09:18:29.3688775Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:18:29.3690092Z Establishing user namespace if not established already.
+2026-04-10T09:18:29.3777475Z Establishing network if not established already.
+2026-04-10T09:18:29.3779889Z Mounting volumes.
+2026-04-10T09:18:29.3784581Z Nested mountpoint 
+2026-04-10T09:18:29.4081041Z Nested mountpoint volatile/logs
+2026-04-10T09:18:29.4559695Z Nested mountpoint 
+2026-04-10T09:18:29.5360963Z Nested mountpoint 
+2026-04-10T09:18:29.5761601Z Nested mountpoint 
+2026-04-10T09:18:30.1594827Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:18:30.1597500Z Creating container.
+2026-04-10T09:18:30.1601902Z Creating pipes for streaming container io.
+2026-04-10T09:18:30.1605388Z Creating stdout named pipe at /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stdout_9b0db3e2a2c74cfabcc51ca6cc14c64d.
+2026-04-10T09:18:30.1609139Z Successfully created stdout named pipe at: /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stdout_9b0db3e2a2c74cfabcc51ca6cc14c64d.
+2026-04-10T09:18:30.1611667Z Opening named pipe /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stdout_9b0db3e2a2c74cfabcc51ca6cc14c64d for reading in non-blocking mode.
+2026-04-10T09:18:30.1697002Z Successfully opened named pipe: /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stdout_9b0db3e2a2c74cfabcc51ca6cc14c64d.
+2026-04-10T09:18:30.1701201Z Successfully removed non-blocking flag from /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stdout_9b0db3e2a2c74cfabcc51ca6cc14c64d.
+2026-04-10T09:18:30.1717842Z Creating stderr named pipe at /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stderr_b672706ccb5b4b469e012a9fc789d33f.
+2026-04-10T09:18:30.1811131Z Successfully created stderr named pipe at: /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stderr_b672706ccb5b4b469e012a9fc789d33f.
+2026-04-10T09:18:30.1813586Z Opening named pipe /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stderr_b672706ccb5b4b469e012a9fc789d33f for reading in non-blocking mode.
+2026-04-10T09:18:30.1908328Z Successfully opened named pipe: /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stderr_b672706ccb5b4b469e012a9fc789d33f.
+2026-04-10T09:18:30.1910576Z Successfully removed non-blocking flag from /podr/container/pipe/64b80511eb36_gallery-api-sohvi-bicep/stderr_b672706ccb5b4b469e012a9fc789d33f.
+2026-04-10T09:18:30.1990202Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:18:30.8469549Z Starting container: 64b80511eb36_gallery-api-sohvi-bicep.
+2026-04-10T09:18:31.0243797Z Starting watchers and probes.
+2026-04-10T09:18:31.0327905Z Starting metrics collection.
+2026-04-10T09:18:31.0331163Z Container is running.
+2026-04-10T09:18:31.0343244Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:18:31.2737278Z Container start method finished after 2201 ms.
+2026-04-10T09:18:31.3042720Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:18:31.3043617Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:19:10.8701696Z Container has finished running with exit code: 134.
+2026-04-10T09:19:10.8710520Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:19:10.8721150Z Stop and delete container. Retry count = 0
+2026-04-10T09:19:10.8721995Z Stopping container: 64b80511eb36_gallery-api-sohvi-bicep.
+2026-04-10T09:19:11.0028687Z Deleting container: 64b80511eb36_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:19:11.2410536Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:19:11.2417914Z Container is terminated. Total time elapsed: 370 ms.
+2026-04-10T09:19:11.2426699Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:19:11.2780455Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:17:08, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:11.2835102Z Site startup probe failed after 39.9509038 seconds.
+2026-04-10T09:19:11.5204117Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:11.5504914Z Failed to start site. Revert by stopping site.
+2026-04-10T09:19:11.5512007Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:11.5693589Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:11.5693927Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:19:11.5792588Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:12.9199534Z Site container: gallery-api-sohvi-bicep_managedIdentity terminated during site startup.
+2026-04-10T09:19:12.9292542Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:13.0493403Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:19:13.5306886Z Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:20:13
+2026-04-10T09:19:13.5308544Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:13.5314504Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:19:13 (UTC), DetailsLevel: WARN
+2026-04-10T09:19:13.6805172Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:19:13 (UTC), DetailsLevel: WARN
+2026-04-10T09:19:18.9873155Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:18.9873687Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:24.0843187Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:24.0843507Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:29.2235097Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:29.2235378Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:34.3936280Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:34.3936848Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:39.5888988Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:39.5890303Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:44.7679899Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:44.7680431Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:49.9714307Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:49.9714584Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:19:55.2273772Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:19:55.2274309Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:20:00.4390473Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:20:00.4391799Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:20:05.5630438Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:20:05.5630975Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:20:10.7206380Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:20:10.7206906Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:20:13.5298487Z Site: gallery-api-sohvi-bicep is unblocked.
+2026-04-10T09:20:15.8462388Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:20:18.6933738Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:20:29.7137914Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:20:13, DetailsLevel: WARN
+2026-04-10T09:20:29.7150268Z Container start method called.
+2026-04-10T09:20:29.7155844Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:20:29.7157969Z Establishing network.
+2026-04-10T09:20:29.7159177Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:20:30.0168984Z Container is starting.
+2026-04-10T09:20:30.0169968Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:20:30.0170791Z Establishing user namespace if not established already.
+2026-04-10T09:20:30.0171529Z Establishing network if not established already.
+2026-04-10T09:20:30.0172796Z Mounting volumes.
+2026-04-10T09:20:30.0174314Z Nested mountpoint 
+2026-04-10T09:20:30.0553484Z Nested mountpoint volatile/logs
+2026-04-10T09:20:30.0961309Z Nested mountpoint 
+2026-04-10T09:20:30.0969911Z Nested mountpoint 
+2026-04-10T09:20:30.1460498Z Nested mountpoint 
+2026-04-10T09:20:30.6267236Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:20:30.6269972Z Creating container.
+2026-04-10T09:20:30.6270956Z Creating pipes for streaming container io.
+2026-04-10T09:20:30.6271768Z Creating stdout named pipe at /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stdout_482e5e4d09f04b2386d199da6c6c8ae7.
+2026-04-10T09:20:30.6367223Z Successfully created stdout named pipe at: /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stdout_482e5e4d09f04b2386d199da6c6c8ae7.
+2026-04-10T09:20:30.6442596Z Opening named pipe /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stdout_482e5e4d09f04b2386d199da6c6c8ae7 for reading in non-blocking mode.
+2026-04-10T09:20:30.6445091Z Successfully opened named pipe: /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stdout_482e5e4d09f04b2386d199da6c6c8ae7.
+2026-04-10T09:20:30.6445917Z Successfully removed non-blocking flag from /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stdout_482e5e4d09f04b2386d199da6c6c8ae7.
+2026-04-10T09:20:30.6456650Z Creating stderr named pipe at /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stderr_32e7c8b0fa5540c0bd073ec02964a1d8.
+2026-04-10T09:20:30.6458457Z Successfully created stderr named pipe at: /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stderr_32e7c8b0fa5540c0bd073ec02964a1d8.
+2026-04-10T09:20:30.6459231Z Opening named pipe /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stderr_32e7c8b0fa5540c0bd073ec02964a1d8 for reading in non-blocking mode.
+2026-04-10T09:20:30.6460199Z Successfully opened named pipe: /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stderr_32e7c8b0fa5540c0bd073ec02964a1d8.
+2026-04-10T09:20:30.6460900Z Successfully removed non-blocking flag from /podr/container/pipe/3e24c10e2582_gallery-api-sohvi-bicep/stderr_32e7c8b0fa5540c0bd073ec02964a1d8.
+2026-04-10T09:20:30.6549812Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:20:31.2417811Z Starting container: 3e24c10e2582_gallery-api-sohvi-bicep.
+2026-04-10T09:20:31.3027537Z Starting watchers and probes.
+2026-04-10T09:20:31.3119768Z Starting metrics collection.
+2026-04-10T09:20:31.3121567Z Container is running.
+2026-04-10T09:20:31.3122774Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:20:31.5118168Z Container start method finished after 1796 ms.
+2026-04-10T09:20:31.5301662Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:20:31.5302628Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:21:09.3928228Z Container has finished running with exit code: 134.
+2026-04-10T09:21:09.3929609Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:21:09.4712766Z Stop and delete container. Retry count = 0
+2026-04-10T09:21:09.4796450Z Stopping container: 3e24c10e2582_gallery-api-sohvi-bicep.
+2026-04-10T09:21:09.6645328Z Deleting container: 3e24c10e2582_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:21:10.1767648Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:21:10.1945002Z Container is terminated. Total time elapsed: 781 ms.
+2026-04-10T09:21:10.1946480Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:21:10.2720380Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:19:11, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:21:10.3007921Z Site startup probe failed after 38.7699772 seconds.
+2026-04-10T09:21:10.7485593Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:21:10.8264943Z Failed to start site. Revert by stopping site.
+2026-04-10T09:21:10.8267412Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:21:10.8271048Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:21:10.8271309Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:22:20.6081349Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:23:13, DetailsLevel: WARN
+2026-04-10T09:22:26.8256722Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:23:13, DetailsLevel: WARN
+2026-04-10T09:22:51.7267629Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:23:13, DetailsLevel: WARN
+2026-04-10T09:22:51.7474403Z Container start method called.
+2026-04-10T09:22:51.7476017Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.5:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:22:51.7856592Z Establishing network.
+2026-04-10T09:22:51.7949734Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:22:52.6613811Z Container is starting.
+2026-04-10T09:22:52.6616371Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:22:52.6617953Z Establishing user namespace if not established already.
+2026-04-10T09:22:52.6694081Z Establishing network if not established already.
+2026-04-10T09:22:52.6697961Z Mounting volumes.
+2026-04-10T09:22:52.6700879Z Nested mountpoint 
+2026-04-10T09:22:52.8462654Z Nested mountpoint volatile/logs
+2026-04-10T09:22:52.9238295Z Nested mountpoint 
+2026-04-10T09:22:53.0841951Z Nested mountpoint 
+2026-04-10T09:22:53.3549633Z Nested mountpoint 
+2026-04-10T09:22:54.5511537Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:22:54.5808477Z Creating container.
+2026-04-10T09:22:54.5811892Z Creating pipes for streaming container io.
+2026-04-10T09:22:54.5813195Z Creating stdout named pipe at /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stdout_c03dfe3aeff34f2e9e9e2eafa16917fe.
+2026-04-10T09:22:54.5815309Z Successfully created stdout named pipe at: /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stdout_c03dfe3aeff34f2e9e9e2eafa16917fe.
+2026-04-10T09:22:54.5816105Z Opening named pipe /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stdout_c03dfe3aeff34f2e9e9e2eafa16917fe for reading in non-blocking mode.
+2026-04-10T09:22:54.5817050Z Successfully opened named pipe: /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stdout_c03dfe3aeff34f2e9e9e2eafa16917fe.
+2026-04-10T09:22:54.5817755Z Successfully removed non-blocking flag from /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stdout_c03dfe3aeff34f2e9e9e2eafa16917fe.
+2026-04-10T09:22:54.6008577Z Creating stderr named pipe at /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stderr_abc2fa938f8641489b24982fe8ded894.
+2026-04-10T09:22:54.6010712Z Successfully created stderr named pipe at: /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stderr_abc2fa938f8641489b24982fe8ded894.
+2026-04-10T09:22:54.6011522Z Opening named pipe /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stderr_abc2fa938f8641489b24982fe8ded894 for reading in non-blocking mode.
+2026-04-10T09:22:54.6012509Z Successfully opened named pipe: /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stderr_abc2fa938f8641489b24982fe8ded894.
+2026-04-10T09:22:54.6013205Z Successfully removed non-blocking flag from /podr/container/pipe/8ebd06ea702d_gallery-api-sohvi-bicep/stderr_abc2fa938f8641489b24982fe8ded894.
+2026-04-10T09:22:54.6030908Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:22:56.2444393Z Starting container: 8ebd06ea702d_gallery-api-sohvi-bicep.
+2026-04-10T09:22:56.3449936Z Starting watchers and probes.
+2026-04-10T09:22:56.3544160Z Starting metrics collection.
+2026-04-10T09:22:56.3547563Z Container is running.
+2026-04-10T09:22:56.3552635Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:22:56.9684626Z Container start method finished after 5220 ms.
+2026-04-10T09:22:56.9961544Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:22:56.9962036Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:23:48.6699562Z Container has finished running with exit code: 134.
+2026-04-10T09:23:48.6790656Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:23:48.6876841Z Stop and delete container. Retry count = 0
+2026-04-10T09:23:48.6878006Z Stopping container: 8ebd06ea702d_gallery-api-sohvi-bicep.
+2026-04-10T09:23:48.7682545Z Deleting container: 8ebd06ea702d_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:23:49.0039404Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:23:49.0041214Z Container is terminated. Total time elapsed: 324 ms.
+2026-04-10T09:23:49.0133953Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:23:49.0142581Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:21:10, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:23:49.0721706Z Site startup probe failed after 52.0651096 seconds.
+2026-04-10T09:23:49.3372931Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:23:49.3677262Z Failed to start site. Revert by stopping site.
+2026-04-10T09:23:49.3683405Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:23:49.3871782Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:23:49.3872215Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:24:12.1018179Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:23:51 (UTC), DetailsLevel: ERR
+2026-04-10T09:24:16.6070916Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:23:51 (UTC), DetailsLevel: ERR
+2026-04-10T09:24:34.7364155Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:23:51 (UTC), DetailsLevel: ERR
+2026-04-10T09:24:34.7371273Z Container start method called.
+2026-04-10T09:24:34.7563065Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:24:34.7571360Z Establishing network.
+2026-04-10T09:24:34.7573739Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:24:35.0822817Z Container is starting.
+2026-04-10T09:24:35.0823667Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:24:35.0824440Z Establishing user namespace if not established already.
+2026-04-10T09:24:35.0825181Z Establishing network if not established already.
+2026-04-10T09:24:35.0826334Z Mounting volumes.
+2026-04-10T09:24:35.0827648Z Nested mountpoint 
+2026-04-10T09:24:35.1231789Z Nested mountpoint volatile/logs
+2026-04-10T09:24:35.2199857Z Nested mountpoint 
+2026-04-10T09:24:35.2303625Z Nested mountpoint 
+2026-04-10T09:24:35.2507798Z Nested mountpoint 
+2026-04-10T09:24:36.2468401Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:24:36.2471318Z Creating container.
+2026-04-10T09:24:36.2472506Z Creating pipes for streaming container io.
+2026-04-10T09:24:36.2473345Z Creating stdout named pipe at /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stdout_114f3bc5a0bf443e8105ed004c556304.
+2026-04-10T09:24:36.2475514Z Successfully created stdout named pipe at: /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stdout_114f3bc5a0bf443e8105ed004c556304.
+2026-04-10T09:24:36.2476319Z Opening named pipe /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stdout_114f3bc5a0bf443e8105ed004c556304 for reading in non-blocking mode.
+2026-04-10T09:24:36.2477236Z Successfully opened named pipe: /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stdout_114f3bc5a0bf443e8105ed004c556304.
+2026-04-10T09:24:36.2478015Z Successfully removed non-blocking flag from /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stdout_114f3bc5a0bf443e8105ed004c556304.
+2026-04-10T09:24:36.2950296Z Creating stderr named pipe at /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stderr_ea6fef698a674bc7b53d75bf2260e0d5.
+2026-04-10T09:24:36.2955675Z Successfully created stderr named pipe at: /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stderr_ea6fef698a674bc7b53d75bf2260e0d5.
+2026-04-10T09:24:36.2957062Z Opening named pipe /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stderr_ea6fef698a674bc7b53d75bf2260e0d5 for reading in non-blocking mode.
+2026-04-10T09:24:36.2959943Z Successfully opened named pipe: /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stderr_ea6fef698a674bc7b53d75bf2260e0d5.
+2026-04-10T09:24:36.2960879Z Successfully removed non-blocking flag from /podr/container/pipe/2d0c17a0cf45_gallery-api-sohvi-bicep/stderr_ea6fef698a674bc7b53d75bf2260e0d5.
+2026-04-10T09:24:36.3250349Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:24:38.6267576Z Starting container: 2d0c17a0cf45_gallery-api-sohvi-bicep.
+2026-04-10T09:24:38.7839561Z Starting watchers and probes.
+2026-04-10T09:24:38.8113912Z Starting metrics collection.
+2026-04-10T09:24:38.8206210Z Container is running.
+2026-04-10T09:24:38.8214443Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:24:39.3242756Z Container start method finished after 4586 ms.
+2026-04-10T09:24:39.3438111Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:24:39.3440763Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:25:41.9442978Z Container has finished running with exit code: 134.
+2026-04-10T09:25:41.9444859Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:25:41.9534671Z Stop and delete container. Retry count = 0
+2026-04-10T09:25:41.9542215Z Stopping container: 2d0c17a0cf45_gallery-api-sohvi-bicep.
+2026-04-10T09:25:42.2101930Z Deleting container: 2d0c17a0cf45_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:25:42.7827940Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:25:42.7905816Z Container is terminated. Total time elapsed: 845 ms.
+2026-04-10T09:25:42.7922709Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:25:42.8229786Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:23:49, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:42.8805721Z Site startup probe failed after 63.5068052 seconds.
+2026-04-10T09:25:43.1757577Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:43.1968052Z Failed to start site. Revert by stopping site.
+2026-04-10T09:25:43.2054113Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:43.2245988Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:43.2248305Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:25:43.2350520Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:44.9918715Z Site container: gallery-api-sohvi-bicep_managedIdentity terminated during site startup.
+2026-04-10T09:25:44.9930945Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:45.1884282Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:25:45.7625331Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:25:45 (UTC), DetailsLevel: ERR
+2026-04-10T09:25:46.2266948Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:25:45 (UTC), DetailsLevel: ERR
+2026-04-10T09:25:50.1005304Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:25:45 (UTC), DetailsLevel: ERR
+2026-04-10T09:25:53.0689006Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:25:45 (UTC), DetailsLevel: ERR
+2026-04-10T09:26:13.0477838Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:25:45 (UTC), DetailsLevel: ERR
+2026-04-10T09:26:13.0479254Z Container start method called.
+2026-04-10T09:26:13.0558167Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:26:13.0572525Z Establishing network.
+2026-04-10T09:26:13.0574931Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:26:13.4718898Z Container is starting.
+2026-04-10T09:26:13.4808762Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:26:13.4813043Z Establishing user namespace if not established already.
+2026-04-10T09:26:13.4817973Z Establishing network if not established already.
+2026-04-10T09:26:13.4819611Z Mounting volumes.
+2026-04-10T09:26:13.4821387Z Nested mountpoint 
+2026-04-10T09:26:13.5210153Z Nested mountpoint volatile/logs
+2026-04-10T09:26:13.5895346Z Nested mountpoint 
+2026-04-10T09:26:13.6604339Z Nested mountpoint 
+2026-04-10T09:26:13.7592485Z Nested mountpoint 
+2026-04-10T09:26:14.7355675Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:26:14.7526353Z Creating container.
+2026-04-10T09:26:14.7528657Z Creating pipes for streaming container io.
+2026-04-10T09:26:14.7529945Z Creating stdout named pipe at /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stdout_68bbb0c6cf8b41cb91da9f1e043b1090.
+2026-04-10T09:26:14.7532602Z Successfully created stdout named pipe at: /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stdout_68bbb0c6cf8b41cb91da9f1e043b1090.
+2026-04-10T09:26:14.7533756Z Opening named pipe /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stdout_68bbb0c6cf8b41cb91da9f1e043b1090 for reading in non-blocking mode.
+2026-04-10T09:26:14.7535011Z Successfully opened named pipe: /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stdout_68bbb0c6cf8b41cb91da9f1e043b1090.
+2026-04-10T09:26:14.7536545Z Successfully removed non-blocking flag from /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stdout_68bbb0c6cf8b41cb91da9f1e043b1090.
+2026-04-10T09:26:14.8025295Z Creating stderr named pipe at /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stderr_e017b4ec1092429daa50fa668ba9dc4b.
+2026-04-10T09:26:14.8028149Z Successfully created stderr named pipe at: /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stderr_e017b4ec1092429daa50fa668ba9dc4b.
+2026-04-10T09:26:14.8029082Z Opening named pipe /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stderr_e017b4ec1092429daa50fa668ba9dc4b for reading in non-blocking mode.
+2026-04-10T09:26:14.8029992Z Successfully opened named pipe: /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stderr_e017b4ec1092429daa50fa668ba9dc4b.
+2026-04-10T09:26:14.8030766Z Successfully removed non-blocking flag from /podr/container/pipe/2109e0d2efa5_gallery-api-sohvi-bicep/stderr_e017b4ec1092429daa50fa668ba9dc4b.
+2026-04-10T09:26:14.8127265Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:26:16.0985410Z Starting container: 2109e0d2efa5_gallery-api-sohvi-bicep.
+2026-04-10T09:26:16.2068558Z Starting watchers and probes.
+2026-04-10T09:26:16.2165621Z Starting metrics collection.
+2026-04-10T09:26:16.2169804Z Container is running.
+2026-04-10T09:26:16.2176511Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:26:16.3166229Z Container start method finished after 3268 ms.
+2026-04-10T09:26:16.3168846Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:26:16.3242833Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:26:52.4004439Z Container has finished running with exit code: 134.
+2026-04-10T09:26:52.4006383Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:26:52.4022745Z Stop and delete container. Retry count = 0
+2026-04-10T09:26:52.4023687Z Stopping container: 2109e0d2efa5_gallery-api-sohvi-bicep.
+2026-04-10T09:26:52.4726729Z Deleting container: 2109e0d2efa5_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:26:52.6905635Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:26:52.6999243Z Container is terminated. Total time elapsed: 298 ms.
+2026-04-10T09:26:52.7007096Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:26:52.7080951Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:25:43, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:52.7212027Z Site startup probe failed after 36.3959476 seconds.
+2026-04-10T09:26:52.9182407Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:52.9289193Z Failed to start site. Revert by stopping site.
+2026-04-10T09:26:52.9290913Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:52.9467485Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:52.9467876Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:26:52.9486067Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:53.9946008Z Site container: gallery-api-sohvi-bicep_managedIdentity terminated during site startup.
+2026-04-10T09:26:53.9947657Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:54.1057029Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:26:54.3838973Z Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:27:54
+2026-04-10T09:26:54.3904383Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:27:54, DetailsLevel: WARN
+2026-04-10T09:26:54.3921839Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:26:54 (UTC), DetailsLevel: WARN
+2026-04-10T09:26:54.5107871Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:26:54 (UTC), DetailsLevel: WARN
+2026-04-10T09:27:54.3821405Z Site: gallery-api-sohvi-bicep is unblocked.
+2026-04-10T09:31:40.1128396Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:26:54 (UTC), DetailsLevel: WARN
+2026-04-10T09:31:43.3667531Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:26:54 (UTC), DetailsLevel: WARN
+2026-04-10T09:31:55.7046308Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:26:54 (UTC), DetailsLevel: WARN
+2026-04-10T09:31:55.7048793Z Container start method called.
+2026-04-10T09:31:55.7049944Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:31:55.7051206Z Establishing network.
+2026-04-10T09:31:55.7052540Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:31:55.9060645Z Container is starting.
+2026-04-10T09:31:55.9137970Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:31:55.9151114Z Establishing user namespace if not established already.
+2026-04-10T09:31:55.9152939Z Establishing network if not established already.
+2026-04-10T09:31:55.9155139Z Mounting volumes.
+2026-04-10T09:31:55.9164008Z Nested mountpoint 
+2026-04-10T09:31:55.9917565Z Nested mountpoint volatile/logs
+2026-04-10T09:31:56.0105694Z Nested mountpoint 
+2026-04-10T09:31:56.0197831Z Nested mountpoint 
+2026-04-10T09:31:56.0390079Z Nested mountpoint 
+2026-04-10T09:31:56.6969261Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:31:56.6970315Z Creating container.
+2026-04-10T09:31:56.6971080Z Creating pipes for streaming container io.
+2026-04-10T09:31:56.6971805Z Creating stdout named pipe at /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stdout_2ff6f295c28a4165b9b503352d66fc92.
+2026-04-10T09:31:56.6973570Z Successfully created stdout named pipe at: /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stdout_2ff6f295c28a4165b9b503352d66fc92.
+2026-04-10T09:31:56.6974389Z Opening named pipe /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stdout_2ff6f295c28a4165b9b503352d66fc92 for reading in non-blocking mode.
+2026-04-10T09:31:56.6975223Z Successfully opened named pipe: /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stdout_2ff6f295c28a4165b9b503352d66fc92.
+2026-04-10T09:31:56.6975977Z Successfully removed non-blocking flag from /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stdout_2ff6f295c28a4165b9b503352d66fc92.
+2026-04-10T09:31:56.7066090Z Creating stderr named pipe at /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stderr_ff256577d02643e6a5eac77eea20b4e6.
+2026-04-10T09:31:56.7076873Z Successfully created stderr named pipe at: /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stderr_ff256577d02643e6a5eac77eea20b4e6.
+2026-04-10T09:31:56.7078162Z Opening named pipe /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stderr_ff256577d02643e6a5eac77eea20b4e6 for reading in non-blocking mode.
+2026-04-10T09:31:56.7272295Z Successfully opened named pipe: /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stderr_ff256577d02643e6a5eac77eea20b4e6.
+2026-04-10T09:31:56.7278228Z Successfully removed non-blocking flag from /podr/container/pipe/4f3d8938271f_gallery-api-sohvi-bicep/stderr_ff256577d02643e6a5eac77eea20b4e6.
+2026-04-10T09:31:56.7360485Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:31:57.3127417Z Starting container: 4f3d8938271f_gallery-api-sohvi-bicep.
+2026-04-10T09:31:57.4914683Z Starting watchers and probes.
+2026-04-10T09:31:57.5029420Z Starting metrics collection.
+2026-04-10T09:31:57.5110827Z Container is running.
+2026-04-10T09:31:57.5112807Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:31:57.7829844Z Container start method finished after 2077 ms.
+2026-04-10T09:31:57.7831659Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:31:57.7831849Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:32:58.3957989Z Container has finished running with exit code: 134.
+2026-04-10T09:32:58.3960446Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:32:58.4222739Z Stop and delete container. Retry count = 0
+2026-04-10T09:32:58.4235867Z Stopping container: 4f3d8938271f_gallery-api-sohvi-bicep.
+2026-04-10T09:32:58.5168677Z Deleting container: 4f3d8938271f_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:32:59.0513752Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:32:59.0604385Z Container is terminated. Total time elapsed: 644 ms.
+2026-04-10T09:32:59.0614731Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:32:59.0626843Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:26:52, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:32:59.1011600Z Site startup probe failed after 61.2976276 seconds.
+2026-04-10T09:32:59.3461292Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:32:59.3729427Z Failed to start site. Revert by stopping site.
+2026-04-10T09:32:59.3743381Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:32:59.3749560Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:32:59.3749762Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:32:59.4141304Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:33:00.4676213Z Site container: gallery-api-sohvi-bicep_managedIdentity terminated during site startup.
+2026-04-10T09:33:00.4751603Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:33:00.6542256Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:33:01.2617177Z Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:34:01
+2026-04-10T09:33:01.3016753Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: gallery-api-sohvi-bicep will be blocked for 1 minutes till 04/10/2026 09:34:01, DetailsLevel: WARN
+2026-04-10T09:33:01.3320487Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:33:01 (UTC), DetailsLevel: WARN
+2026-04-10T09:33:01.6205338Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:33:01 (UTC), DetailsLevel: WARN
+2026-04-10T09:33:33.2147006Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:34:01, DetailsLevel: WARN
+2026-04-10T09:33:33.2147544Z Start site prohibitted because the site is being blocked.
+2026-04-10T09:34:01.2268980Z Site: gallery-api-sohvi-bicep is unblocked.
+2026-04-10T09:35:04.1377451Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:34:01, DetailsLevel: WARN
+2026-04-10T09:35:07.0542127Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:34:01, DetailsLevel: WARN
+2026-04-10T09:35:18.0995138Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 04/10/2026 09:34:01, DetailsLevel: WARN
+2026-04-10T09:35:18.0997056Z Container start method called.
+2026-04-10T09:35:18.1000365Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:35:18.1190857Z Establishing network.
+2026-04-10T09:35:18.1392353Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:35:18.4060047Z Container is starting.
+2026-04-10T09:35:18.4060901Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:35:18.4061716Z Establishing user namespace if not established already.
+2026-04-10T09:35:18.4062460Z Establishing network if not established already.
+2026-04-10T09:35:18.4064773Z Mounting volumes.
+2026-04-10T09:35:18.4134682Z Nested mountpoint 
+2026-04-10T09:35:18.4776319Z Nested mountpoint volatile/logs
+2026-04-10T09:35:18.4955412Z Nested mountpoint 
+2026-04-10T09:35:18.4965959Z Nested mountpoint 
+2026-04-10T09:35:18.5331190Z Nested mountpoint 
+2026-04-10T09:35:18.9864599Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:35:18.9866281Z Creating container.
+2026-04-10T09:35:18.9867149Z Creating pipes for streaming container io.
+2026-04-10T09:35:18.9867904Z Creating stdout named pipe at /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stdout_a065dc7187ad4c6fb8605ca1b562529c.
+2026-04-10T09:35:18.9870242Z Successfully created stdout named pipe at: /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stdout_a065dc7187ad4c6fb8605ca1b562529c.
+2026-04-10T09:35:18.9870991Z Opening named pipe /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stdout_a065dc7187ad4c6fb8605ca1b562529c for reading in non-blocking mode.
+2026-04-10T09:35:18.9871873Z Successfully opened named pipe: /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stdout_a065dc7187ad4c6fb8605ca1b562529c.
+2026-04-10T09:35:18.9872644Z Successfully removed non-blocking flag from /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stdout_a065dc7187ad4c6fb8605ca1b562529c.
+2026-04-10T09:35:19.0078003Z Creating stderr named pipe at /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stderr_9de00fff7dcc4a1b921b0e67ddc5842d.
+2026-04-10T09:35:19.0083083Z Successfully created stderr named pipe at: /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stderr_9de00fff7dcc4a1b921b0e67ddc5842d.
+2026-04-10T09:35:19.0084744Z Opening named pipe /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stderr_9de00fff7dcc4a1b921b0e67ddc5842d for reading in non-blocking mode.
+2026-04-10T09:35:19.0251394Z Successfully opened named pipe: /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stderr_9de00fff7dcc4a1b921b0e67ddc5842d.
+2026-04-10T09:35:19.0253898Z Successfully removed non-blocking flag from /podr/container/pipe/9bcdc45d702f_gallery-api-sohvi-bicep/stderr_9de00fff7dcc4a1b921b0e67ddc5842d.
+2026-04-10T09:35:19.0261274Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:35:19.5296886Z Starting container: 9bcdc45d702f_gallery-api-sohvi-bicep.
+2026-04-10T09:35:19.5904489Z Starting watchers and probes.
+2026-04-10T09:35:19.5920845Z Starting metrics collection.
+2026-04-10T09:35:19.6105043Z Container is running.
+2026-04-10T09:35:19.6120589Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:35:19.8256827Z Container start method finished after 1725 ms.
+2026-04-10T09:35:19.8263835Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:35:19.8264427Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:36:00.5508919Z Container has finished running with exit code: 134.
+2026-04-10T09:36:00.5511282Z Container is terminating. Grace period: 5 seconds.
+2026-04-10T09:36:00.5531339Z Stop and delete container. Retry count = 0
+2026-04-10T09:36:00.5620800Z Stopping container: 9bcdc45d702f_gallery-api-sohvi-bicep.
+2026-04-10T09:36:00.9426109Z Deleting container: 9bcdc45d702f_gallery-api-sohvi-bicep. Retry count = 0
+2026-04-10T09:36:01.3254971Z Container spec TerminationMessagePolicy  path 
+2026-04-10T09:36:01.3366991Z Container is terminated. Total time elapsed: 782 ms.
+2026-04-10T09:36:01.3373946Z Site container: gallery-api-sohvi-bicep terminated during site startup.
+2026-04-10T09:36:01.3379150Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:32:59, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:36:01.3863863Z Site startup probe failed after 41.5484471 seconds.
+2026-04-10T09:36:01.6025813Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:36:01.6532725Z Failed to start site. Revert by stopping site.
+2026-04-10T09:36:01.6545056Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:36:01.6602313Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: gallery-api-sohvi-bicep terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-04-10T09:36:01.6602582Z Site: gallery-api-sohvi-bicep stopped.
+2026-04-10T09:37:09.5355876Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:36:04 (UTC), DetailsLevel: WARN
+2026-04-10T09:37:13.0679175Z State: Starting, Action: StartingMsiContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:36:04 (UTC), DetailsLevel: WARN
+2026-04-10T09:37:33.8425167Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 04/10/2026 09:36:04 (UTC), DetailsLevel: WARN
+2026-04-10T09:37:33.8426275Z Container start method called.
+2026-04-10T09:37:33.8426712Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:37:33.8427580Z Establishing network.
+2026-04-10T09:37:33.8428633Z Pulling image: appsvc/dotnetcore:8.0_20260115.4.tuxprod.
+2026-04-10T09:37:34.1607869Z Container is starting.
+2026-04-10T09:37:34.1610982Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for gallery-api-sohvi-bicep., DetailsLevel: INFO
+2026-04-10T09:37:34.1612567Z Establishing user namespace if not established already.
+2026-04-10T09:37:34.1616826Z Establishing network if not established already.
+2026-04-10T09:37:34.1623293Z Mounting volumes.
+2026-04-10T09:37:34.1889674Z Nested mountpoint 
+2026-04-10T09:37:34.2098741Z Nested mountpoint volatile/logs
+2026-04-10T09:37:34.3380758Z Nested mountpoint 
+2026-04-10T09:37:34.3597665Z Nested mountpoint 
+2026-04-10T09:37:34.5274963Z Nested mountpoint 
+2026-04-10T09:37:35.0487002Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for gallery-api-sohvi-bicep. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-04-10T09:37:35.0497059Z Creating container.
+2026-04-10T09:37:35.0501453Z Creating pipes for streaming container io.
+2026-04-10T09:37:35.0578620Z Creating stdout named pipe at /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stdout_bbee479de3e94d7c8bc6da34a72582d7.
+2026-04-10T09:37:35.0585303Z Successfully created stdout named pipe at: /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stdout_bbee479de3e94d7c8bc6da34a72582d7.
+2026-04-10T09:37:35.0589918Z Opening named pipe /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stdout_bbee479de3e94d7c8bc6da34a72582d7 for reading in non-blocking mode.
+2026-04-10T09:37:35.0593351Z Successfully opened named pipe: /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stdout_bbee479de3e94d7c8bc6da34a72582d7.
+2026-04-10T09:37:35.0596151Z Successfully removed non-blocking flag from /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stdout_bbee479de3e94d7c8bc6da34a72582d7.
+2026-04-10T09:37:35.0601745Z Creating stderr named pipe at /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stderr_569708e430d94e7382d2b05855386be5.
+2026-04-10T09:37:35.0683882Z Successfully created stderr named pipe at: /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stderr_569708e430d94e7382d2b05855386be5.
+2026-04-10T09:37:35.0692062Z Opening named pipe /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stderr_569708e430d94e7382d2b05855386be5 for reading in non-blocking mode.
+2026-04-10T09:37:35.0696836Z Successfully opened named pipe: /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stderr_569708e430d94e7382d2b05855386be5.
+2026-04-10T09:37:35.0778179Z Successfully removed non-blocking flag from /podr/container/pipe/5ac2a8ec4eaa_gallery-api-sohvi-bicep/stderr_569708e430d94e7382d2b05855386be5.
+2026-04-10T09:37:35.0791501Z Creating container with image: appsvc/dotnetcore:8.0_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/dotnetcore:8.0_20260115.4.tuxprod
+2026-04-10T09:37:35.5304264Z Starting container: 5ac2a8ec4eaa_gallery-api-sohvi-bicep.
+2026-04-10T09:37:35.5886061Z Starting watchers and probes.
+2026-04-10T09:37:35.5895377Z Starting metrics collection.
+2026-04-10T09:37:35.5898267Z Container is running.
+2026-04-10T09:37:35.5905954Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:37:35.8167927Z Container start method finished after 1973 ms.
+2026-04-10T09:37:35.8176398Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container gallery-api-sohvi-bicep successfully created and is running., DetailsLevel: INFO
+2026-04-10T09:37:35.8177001Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-04-10T09:38:36.2445733Z Site startup probe succeeded after 60.378991 seconds.
+2026-04-10T09:38:36.5127621Z State: Starting, Action: WarmUpProbeSucceeded, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site startup probe succeeded after 60.378991 seconds., DetailsLevel: INFO
+2026-04-10T09:38:36.8655020Z Site is running with deployment version: 7c48236f-54bf-4ecc-ab13-ae9716787435
+2026-04-10T09:38:36.8751560Z Site started.
+2026-04-10T09:38:36.8758829Z State: Started, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 04/10/2026 09:36:01, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site started at 04/10/2026 09:38:36 (UTC), DetailsLevel: INFO
+2026-04-10T09:38:36.9041607Z Site is running with patch version DOTNETCORE 8.0.23

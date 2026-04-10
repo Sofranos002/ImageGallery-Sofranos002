@@ -1,39 +1,56 @@
+using Azure.Identity;
 using GalleryApi.Application;
 using GalleryApi.Infrastructure;
-using GalleryApi.Infrastructure.Moderation;   // ← UUSI using
+using GalleryApi.Infrastructure.Moderation;
 using GalleryApi.Infrastructure.Options;
 using GalleryApi.Infrastructure.Persistence;
+using GalleryApi.Infrastructure.Storage;   // UUSI
+using GalleryApi.Domain.Interfaces;   // UUSI
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ============================================================
-// ONGELMA: API-avain on kovakoodattu suoraan lähdekoodiin!
+// Key Vault konfiguraatiolähteeksi (Azuressa)
 // ============================================================
-//var moderationClient = new ModerationServiceClient("sk-moderation-hardcoded-dev-12345");
-//builder.Services.AddSingleton(moderationClient); // VANHA, poistettu
-
-// ❌ POISTA NÄMÄ (väärä Options-luokka ja väärä osion nimi)
-//builder.Services.Configure<ModerationOptions>(
-//    builder.Configuration.GetSection("Moderation"));
-//
-//var moderationOptions = builder.Configuration.GetSection("Moderation").Get<ModerationOptions>();
-//builder.Services.AddSingleton(new ModerationServiceClient(moderationOptions.ApiKey));
+var keyVaultUrl = builder.Configuration["KeyVault:VaultUrl"];
+if (!string.IsNullOrEmpty(keyVaultUrl))
+{
+    builder.Configuration.AddAzureKeyVault(
+        new Uri(keyVaultUrl),
+        new DefaultAzureCredential());
+}
 
 // ============================================================
-// UUSI LISÄYS (VAIHE 4): Options Pattern ModerationServiceOptions
+// Moderation Options Pattern
 // ============================================================
-builder.Services.Configure<ModerationServiceOptions>(                 // UUSI LISÄYS
-    builder.Configuration.GetSection(ModerationServiceOptions.SectionName)); // UUSI LISÄYS
+builder.Services.Configure<ModerationServiceOptions>(
+    builder.Configuration.GetSection(ModerationServiceOptions.SectionName));
 
-// ModerationServiceClient saa asetukset DI:n kautta
-builder.Services.AddSingleton<ModerationServiceClient>();            // UUSI LISÄYS
+builder.Services.AddSingleton<ModerationServiceClient>();
 
+// ============================================================
+// Storage Options Pattern (AzureBlobStorageService tarvitsee tämän)
+// ============================================================
+builder.Services.Configure<StorageOptions>(                 // UUSI
+    builder.Configuration.GetSection("Storage"));           // UUSI
 
-// Konfiguraatio-osiot (Options Pattern)
-builder.Services.Configure<StorageOptions>(
-    builder.Configuration.GetSection(StorageOptions.SectionName));
+// ============================================================
+// Valitse tallennuspalvelu Provider-arvon perusteella
+// ============================================================
+var storageProvider = builder.Configuration["Storage:Provider"];
 
+if (storageProvider == "azure")                             // UUSI
+{
+    builder.Services.AddScoped<IStorageService, AzureBlobStorageService>();   // UUSI
+}
+else
+{
+    builder.Services.AddScoped<IStorageService, LocalStorageService>();       // UUSI
+}
+
+// ============================================================
 // Sovellus- ja infrastruktuurikerrokset
+// ============================================================
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -58,17 +75,11 @@ using (var scope = app.Services.CreateScope())
     db.Database.EnsureCreated();
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-
-// Staattisten tiedostojen jako — tarjoilee wwwroot-kansion sisällön
 app.UseStaticFiles();
-
 app.UseAuthorization();
 app.MapControllers();
 
